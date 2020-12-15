@@ -36,7 +36,8 @@ public class MainActivity2 extends AppCompatActivity {
         public void run() {
 
             leftTime--;
-            Log.e("lefttime" , ""+leftTime);
+            //Log.e("lefttime" , ""+leftTime);
+            Log.e("测试git" , "yes");
             if (leftTime > 0) {
                 //倒计时效果展示
                 String formatLongToTimeStr = formatLongToTimeStr1(leftTime);
@@ -47,7 +48,6 @@ public class MainActivity2 extends AppCompatActivity {
                 handler.postDelayed(this,1000);
             } else {//倒计时结束
                 //处理业务流程
-
                 //发送消息，结束倒计时
                 tv_hour.setText("00");
                 tv_minutes.setText("00");
