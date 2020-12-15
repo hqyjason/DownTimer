@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:tl="http://schemas.android.com/apk/res-auto">
+
+
+    <com.example.hequn.downtimer.ScrollFloatingButton
+        android:id="@+id/sfb_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/ic_launcher_round"
+        android:backgroundTint="#ffffff"
+        tl:fabSize="mini"
+        tl:borderWidth="0dp"
+        tl:rippleColor="#33728dff"
+        android:elevation="8dp"
+        android:visibility="gone"
+        tl:pressedTranslationZ="16dp"/>
+
+    <Button
+        android:id="@+id/btn_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="开始倒计时"
+        android:visibility="gone"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        android:layout_margin="10dp">
+        <TextView
+            android:id="@+id/tv_hour"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#FFD66250"
+            android:text=""
+            android:textSize="17sp"
+            android:gravity="center"
+            android:padding="10dp"
+            android:background="@drawable/time_down"/>
+
+        <TextView
+            android:id="@+id/tv_minutes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:textColor="#FFD66250"
+            android:text=""
+            android:textSize="17sp"
+            android:gravity="center"
+            android:padding="10dp"
+            android:background="@drawable/time_down"/>
+
+
+    </LinearLayout>
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rlv_data"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
+</LinearLayout>
