@@ -1,6 +1,7 @@
 package com.example.hequn.downtimer;
 
 import android.annotation.SuppressLint;
+import android.app.Dialog;
 import android.content.Context;
 import android.os.Handler;
 import android.os.Message;
@@ -10,14 +11,17 @@ import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -37,6 +41,7 @@ public class MainActivity2 extends AppCompatActivity {
 
             leftTime--;
             //Log.e("lefttime" , ""+leftTime);
+            Log.e("测试git1" , "yes");
             Log.e("测试git" , "yes");
             if (leftTime > 0) {
                 //倒计时效果展示
@@ -85,7 +90,9 @@ public class MainActivity2 extends AppCompatActivity {
         sfb_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                showSelectTimeBottom();
                 Log.e("点击了滑动按钮" , "yes");
+
             }
         });
 
@@ -125,6 +132,25 @@ public class MainActivity2 extends AppCompatActivity {
         Log.e("数据源" , list.toString());
         adapter = new NewsAdapter(this , list);
         rlv_data.setAdapter(adapter);
+    }
+
+    //显示底部选择时间
+    private void showSelectTimeBottom() {
+        //1、使用Dialog、设置style
+        final Dialog dialog = new Dialog(this, R.style.MyDialogStyleBottom);
+        //2、设置布局
+        View view = View.inflate(this, R.layout.select_issue_dialog, null);
+        dialog.setContentView(view);
+        dialog.setCanceledOnTouchOutside(true);
+        Window window = dialog.getWindow();
+        //设置弹出位置
+        window.setGravity(Gravity.BOTTOM);
+        //设置弹出动画
+        // window.setWindowAnimations(R.style.main_menu_animStyle);
+        //设置对话框大小
+        window.setLayout(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+        dialog.show();
+
     }
 
 

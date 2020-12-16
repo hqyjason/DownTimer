@@ -16,7 +16,6 @@
         tl:borderWidth="0dp"
         tl:rippleColor="#33728dff"
         android:elevation="8dp"
-        android:visibility="gone"
         tl:pressedTranslationZ="16dp"/>
 
     <Button
