@@ -41,6 +41,7 @@ public class MainActivity2 extends AppCompatActivity {
 
             leftTime--;
             Log.e("测试分支" , "yes");
+            Log.e("我是一个测试分支" , "yes");
             if (leftTime > 0) {
                 //倒计时效果展示
                 String formatLongToTimeStr = formatLongToTimeStr1(leftTime);
