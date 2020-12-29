@@ -21,6 +21,8 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import org.greenrobot.eventbus.EventBus;
+
 import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.List;
@@ -90,6 +92,8 @@ public class MainActivity2 extends AppCompatActivity {
         sfb_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                MessageEvent messageEvent = new MessageEvent("EVENTBUS");
+                EventBus.getDefault().post(messageEvent);
                 showSelectTimeBottom();
                 Log.e("点击了滑动按钮" , "yes");
 
@@ -132,6 +136,8 @@ public class MainActivity2 extends AppCompatActivity {
         Log.e("数据源" , list.toString());
         adapter = new NewsAdapter(this , list);
         rlv_data.setAdapter(adapter);
+
+
     }
 
     //显示底部选择时间
