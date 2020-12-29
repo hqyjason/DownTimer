@@ -13,7 +13,7 @@
         android:text="问题单原因"
         android:textColor="#ffffffff"
         android:textSize="33sp"
-        android:layout_marginTop="20dp"/>
+        android:layout_marginTop="34dp"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -21,7 +21,7 @@
         android:text="根据您提交的问题单，您还需完善以下信息"
         android:textColor="#ffffffff"
         android:textSize="14sp"
-        android:layout_marginTop="4dp"/>
+        android:layout_marginTop="10dp"/>
 
 
     <ListView
